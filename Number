@@ -1,0 +1,26 @@
+#include <iostream>
+
+#include <cmath>
+
+using namespace std;
+
+ double windspeed;
+   double Fahrenheit;
+   double Celsius;
+
+int main ()
+
+{
+   cin >> Fahrenheit;
+   cin >> windspeed;
+
+}
+void myfunction()
+{
+
+myfunction();{
+
+    double computedwindchill = 35.74 + (( 0.6215 * Fahrenheit) - ( 35.75 * (pow(windspeed, 0.16)))) + (.4275 * Fahrenheit * (pow(windspeed,.16))));
+    cout << computedwindchill << endl;
+
+}
