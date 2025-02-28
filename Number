@@ -4,23 +4,44 @@
 
 using namespace std;
 
- double windspeed;
-   double Fahrenheit;
-   double Celsius;
+// Defined Variables
+    double windspeed;
+   double temperature;
+   void take_input (double& temperature, double& windspeed, double& dewpoint);
+   double cloudbase;
+   double dewpoint;
+   double windchill;
+
 
 int main ()
 
+// Variables are being input
 {
-   cin >> Fahrenheit;
-   cin >> windspeed;
+    cout << "What is the temperature in Fahrenheit? " << endl;
+    cin >> temperature;
+     cout << "What is the wind speed in mph?" << endl;
+     cin >> windspeed;
+     cout << "What is the dew point in Fahrenheit?" << endl;
+     cin >> dewpoint;
+
+
+
+    windchill = 35.74 + ((0.6215 * temperature ) - (35.75 * (pow(windspeed, 0.16)))) + (0.4275 * temperature * (pow(windspeed, 0.16)));
+
+    cout << "Temperature | "  << temperature << endl;
+    cout << "------------|--------" << endl;
+    cout << "Wind Speed  | " << windspeed << endl;
+    cout << "------------|-------- " << endl;
+    cout << "Dew point   | " << dewpoint << endl;
+    cout << "------------|-------- " << endl;
+    cout << "Wind Chill  | " << windchill << endl;
+    cout << "Cloud Base  | " << cloudbase << endl;
+
+
+    return 0;
 
 }
-void myfunction()
-{
 
-myfunction();{
 
-    double computedwindchill = 35.74 + (( 0.6215 * Fahrenheit) - ( 35.75 * (pow(windspeed, 0.16)))) + (.4275 * Fahrenheit * (pow(windspeed,.16))));
-    cout << computedwindchill << endl;
 
-}
+
