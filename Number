@@ -13,34 +13,51 @@ using namespace std;
    double windchill;
 
 
+
 int main ()
 
-// Variables are being input
 {
-    cout << "What is the temperature in Fahrenheit? " << endl;
-    cin >> temperature;
-     cout << "What is the wind speed in mph?" << endl;
-     cin >> windspeed;
-     cout << "What is the dew point in Fahrenheit?" << endl;
-     cin >> dewpoint;
-
-    cloudbase = ((temperature - dewpoint) / 4.4) * 1000;
-
-    windchill = 35.74 + ((0.6215 * temperature ) - (35.75 * (pow(windspeed, 0.16)))) + (0.4275 * temperature * (pow(windspeed, 0.16)));
-
-
-    cout << "Temperature | "  << temperature << endl;
-    cout << "------------|--------" << endl;
-    cout << "Wind Speed  | " << windspeed << endl;
-    cout << "------------|-------- " << endl;
-    cout << "Dew point   | " << dewpoint << endl;
-    cout << "------------|-------- " << endl;
-    cout << "Wind Chill  | " << windchill << endl;
-    cout << "------------|-------- " << endl;
-    cout << "Cloud Base  | " << cloudbase << endl;
-    cout << "------------|-------- " << endl;
-
-
-    return 0;
+    // Welcomes the user
+    cout << "------------------------------------------------------------------"<< endl;
+    cout << "|    Welcome! This program let's the user put in Temperature,    |" << endl;
+    cout << "|     Dew Point,and Wind Speed to identify cloud base and        |" << endl;
+    cout << "|                        wind chill.                             |" << endl;
+    cout << "------------------------------------------------------------------" << endl;
+    cout <<  "                                                                 " << endl;
 
 }
+
+// Variables are being input
+void take_input (double& temperature, double& windspeed, double& dewpoint);
+{
+
+    cout << "Temperature: " << endl;
+    cin >> temperature;
+    cout << "Wind Speed:" << endl;
+    cin >> windspeed;
+    cout << "Dew Point:" << endl;
+    cin >> dewpoint;
+
+
+     //Equations
+
+    windchill = 35.74 + ((0.6215 * temperature ) - (35.75 * (pow(windspeed, 0.16)))) + (0.4275 * temperature * (pow(windspeed, 0.16)));
+    cloudbase = ((temperature - dewpoint) / 4.4) * 1000;
+
+
+
+    // This displays the information for the user
+    cout << "Temperature | "  << temperature << " F" << endl;
+    cout << "------------|---------------" << endl;
+    cout << "Wind Speed  | " << windspeed << " mph" << endl;
+    cout << "------------|---------------" << endl;
+    cout << "Dew point   | " << dewpoint << " dF" << endl;
+    cout << "------------|---------------" << endl;
+    cout << "Wind Chill  | " << windchill << " F" << endl;
+    cout << "------------|--------------- " << endl;
+    cout << "Cloud Base  | " << cloudbase << " ft" << endl;
+
+}
+
+
+
