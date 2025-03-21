@@ -25,9 +25,8 @@ int main()
     // Table defining use of Program
     cout<<" ___________________________________________________"<<endl;
     cout<<"|                                                   |"<<endl;
-    cout<<"| This program calculates Cloud base and wind chill |"<<endl;
-    cout<<"| Please enter temperature in Fahrenheit the dew    |"<<endl;
-    cout<<"| point in Fahrenheit, and wind speed to start      |"<<endl;
+    cout<<"| This program determines Cloud base and wind chill |"<<endl;
+    cout<<"| using temperature, dew point, and windspeed.      |"<<endl;
     cout<<"|___________________________________________________|"<<endl;
 
     Input(tempf, dew, windspeed);
